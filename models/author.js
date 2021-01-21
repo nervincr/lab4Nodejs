@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-  const Author = sequelize.define(
+  const Author1 = sequelize.define(
     "author",
     {
       id: {
@@ -13,8 +13,8 @@ module.exports = (sequelize, DataTypes) => {
       freezeTableName: true
     }
   );
-  Author.associate = models => {
-    Author.hasMany(models.comment);
+  Author1.associate = models => {
+    Author1.hasMany(models.comment);
   };
-  return Author;
+  return Author1;
 };
